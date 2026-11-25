@@ -1,0 +1,78 @@
+---
+title: "Retail Sales Analysis Documentation"
+output: html_document
+---
+
+**AI Assistance Declaration (review before submission):** I used ChatGPT (GPT-6.2, November 25, 2026) for documentation drafting, Markdown formatting, R code examples and troubleshooting, and spreadsheet formula guidance. Prompts used: see Appendix.md. I verified outputs by running R in Posit Cloud and comparing the total with Google Sheets; remaining checks are recorded in Appendix.md. All final calculations are done by myself using R and Sheets. I am responsible for the accuracy and originality of this work.
+
+# Purpose
+
+The script `retail_analysis.R` examines synthetic retail transactions and summarizes revenue by product category.
+
+## Inputs
+
+| Field | Meaning | Imported type |
+| --- | --- | --- |
+| Transaction_ID | Transaction identifier | Character |
+| Sales_Date | Transaction date | Character |
+| Category | Product category | Character |
+| Quantity | Units sold | Integer |
+| Unit_Price | Unit price | Integer |
+
+## Dependencies
+
+The analysis uses base R. Rendering this document requires R Markdown and Pandoc.
+
+## Workflow
+
+### Import and inspection
+
+The CSV is imported into `sales`. The student inspected its structure and checked missing values and duplicate rows in the Console.
+
+```{r inspection, eval=FALSE}
+head(sales)
+str(sales)
+colSums(is.na(sales))
+sum(duplicated(sales))
+```
+
+### Revenue and summary
+
+The following lines reproduce the code visible in the student's executed script. Revenue is quantity multiplied by unit price; `sum` totals revenue and `aggregate` groups it by category.
+
+```{r summary, eval=FALSE}
+sales$Revenue <- sales$Quantity * sales$Unit_Price
+total_revenue <- sum(sales$Revenue)
+print(total_revenue)
+category_revenue <- aggregate(Revenue ~ Category, data = sales, FUN = sum)
+print(category_revenue)
+```
+
+### Visualization
+
+The bar chart displays category revenue with descriptive axis labels.
+
+```{r chart, eval=FALSE}
+barplot(category_revenue$Revenue,
+        names.arg = category_revenue$Category,
+        main = "Revenue by Product Category",
+        xlab = "Product Category",
+        ylab = "Revenue ($)",
+        col = "steelblue")
+```
+
+## Outputs
+
+| Category | Revenue ($) |
+| --- | ---: |
+| Clothing | 390 |
+| Electronics | 820 |
+| Groceries | 220 |
+| Home | 405 |
+| **Overall** | **1,835** |
+
+The student successfully generated the chart in Posit Cloud. The code chunks above are documentation examples with execution disabled; run the actual script separately to reproduce its outputs.
+
+## Verification
+
+The R Console showed zero missing values and zero duplicate rows. Google Sheets displayed an overall total of 1,835, matching R. Category-level cross-check, self spot-check and HTML knitting are still to be documented.

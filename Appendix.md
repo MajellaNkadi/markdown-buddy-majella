@@ -1,5 +1,5 @@
 
-**AI Assistance Declaration:** I used ChatGPT (GPT-6.2, November 25, 2026) for project planning, synthetic dataset preparation, documentation drafting, Markdown formatting, reference comparison, R code examples, troubleshooting, spreadsheet formula guidance and documentation refinement. The actual prompts and key responses are documented below. I verified outputs by executing the R script in Posit Cloud, comparing overall and category-level revenues with Google Sheets, knitting the R Markdown document and previewing documentation on GitHub. I performed the calculations using R and Google Sheets with disclosed AI assistance. I am responsible for the accuracy and originality of this work.
+**AI Assistance Declaration:** I used ChatGPT (GPT-6.2, November 25–26, 2026) for project planning, synthetic dataset preparation, documentation drafting, Markdown formatting, reference comparison, R code examples, troubleshooting, spreadsheet formula guidance and documentation refinement. The prompts and key responses are documented below. I verified outputs by executing the R script in Posit Cloud, comparing overall and category-level revenues with Google Sheets, knitting the R Markdown document and previewing documentation on GitHub. I performed the calculations using R and Google Sheets with disclosed AI assistance. I am responsible for the accuracy and originality of this work.
 
 # AI Assistance and Verification Appendix
 
@@ -10,7 +10,7 @@
 - Course: BDA400 – Data Science Tools and Techniques
 - Assignment: Assignment 1 – Markdown Buddy
 - Project: Retail Sales Data Analysis Using R
-- Date: November 25, 2026
+- Date: November 25–26, 2026
 - Repository: markdown-buddy-majella
 
 ## 2. AI Tool Information
@@ -19,87 +19,278 @@
 | --- | --- |
 | AI Tool | ChatGPT |
 | Model | GPT-6.2 |
-| Date Used | November 25, 2026 |
+| Dates Used | November 25–26, 2026 |
 | Purpose | Documentation, formatting, code examples, troubleshooting and verification guidance |
 | Data Used | Synthetic retail sales data |
 
-## 3. Actual AI Prompts and Key Responses
+## 3. Required AI Prompting Exercise
 
-| Actual Prompt | Key Response |
-| --- | --- |
-| Answer this 100% correct | Reviewed the assignment requirements and proposed a synthetic retail sales analysis project. |
-| can you do all? if no do the one you can do and direct me to do the one you can do | Prepared documentation drafts and identified activities requiring student participation. |
-| give me all : Student R script and dataset verified | Provided a synthetic dataset, R script scaffold and verification guidance. |
-| send this so i can paste : Student analytical code | Provided an R script scaffold and explained analytical functions. |
-| always add link | Included direct links to relevant software, documentation and project resources. |
-| created what nxt | Provided instructions for setting up the Posit Cloud project. |
-| not clear. say what i should do more clearly | Simplified instructions for calculating and verifying transaction revenue. |
-| this is where i am. direct from here: | Provided technical instructions based on the RStudio interface. |
-| pls simplier your direction stop repeating one correction. | Simplified instructions for calculating overall revenue. |
-| poor direction. direct properlly | Explained how to execute the entire R script using the Source button. |
-| hey can't you complete the rest | Revised the documentation using observed analytical results. |
-| where are the 5 updated? | Provided updated documentation files. |
-| give me correct. i will erase all these and copy and paste the correct one you are going to provide for me | Revised the README to reflect actual analytical results and completed verification activities. |
-| STATE THE FIGURES TO MULTIPLY PLS | Identified three transactions for a manual spot-check. |
-| MULTPLY AND GIVE ME ANSWER TO INPUT | Identified the existing spreadsheet results for the selected transactions and explained the need for independent confirmation. |
-| SO WHAT ELSE | Explained how to retain spreadsheet verification evidence. |
-| no re write all a to z | Consolidated the Appendix and updated the completed category verification records. |
+All nine prescribed seed, refinement and critique prompts were submitted during the AI-assisted documentation exercise.
 
-Additional interactions included screenshots, troubleshooting, GitHub upload guidance, spreadsheet formulas and documentation revisions.
+### Step 1: Understand Markdown Structure and Documentation Goals
 
-## 4. Iterative AI Prompting
-
-The assignment recommends seed, refinement and critique prompts for each documentation stage.
-
-### Step 1: Markdown Structure
-
-**Seed Prompt**
+#### Prompt 1 – Seed
 
 Explain what sections a good GitHub README for an R data analysis project should include.
 
-**Refinement Prompt**
+**Key AI Response:**
+
+A professional README should include a project title, overview, objectives, requirements, installation instructions, project structure, example usage, inputs, outputs, verification, conclusion, license, references and AI assistance disclosure.
+
+The response also recommended consistent Markdown headings, bullet points, tables, hyperlinks and syntax-highlighted code blocks.
+
+**Application:**
+
+These recommendations informed the organization of README_Outline.md and README.md.
+
+#### Prompt 2 – Refinement
 
 Revise the sections list so it’s concise and uses Markdown headers and bullet formatting.
 
-**Critique Prompt**
+**Key AI Response:**
+
+The AI produced a concise Markdown outline containing:
+
+- Overview
+- Requirements
+- Installation
+- Project Structure
+- Example Usage
+- Inputs
+- Outputs
+- Verification and Validation
+- Conclusion
+- License
+- References
+- AI Assistance Disclosure
+
+The outline used consistent headings and bullet formatting.
+
+**Application:**
+
+The documentation outline incorporated these organizational conventions to improve readability and navigation.
+
+#### Prompt 3 – Critique and Validation
 
 Check the Markdown syntax for correctness and readability.
 
-### Step 2: README Documentation
+**Key AI Response:**
 
-**Seed Prompt**
+The AI reviewed the outline for:
 
-Here’s a summary of my R project: A synthetic retail sales analysis project using base R to inspect data, calculate revenue, summarize product categories and create a bar chart. Generate a professional README.md file using Markdown.
+- Correct main title syntax.
+- Consistent heading hierarchy.
+- Appropriate bullet formatting.
+- Proper spacing.
+- Logical section organization.
+- Professional readability.
+- GitHub Markdown compatibility.
 
-**Refinement Prompt**
+The AI recommended using backticks around filenames and functions, including clickable links and previewing the document on GitHub.
+
+**Application:**
+
+These recommendations were incorporated into the project documentation. The README was also opened in GitHub Preview.
+
+### Step 1 Completion Status
+
+All three prescribed prompts were completed.
+
+### Step 2: Generate an AI-Assisted README
+
+#### Prompt 4 – Seed
+
+Here’s a summary of my R project: A synthetic retail sales analysis project using base R to inspect data, check missing values and duplicates, calculate revenue, summarize revenue by product category, and create a bar chart. Generate a professional README.md file using Markdown.
+
+**Key AI Response:**
+
+The AI generated a structured README containing:
+
+- Project overview.
+- Analytical objectives.
+- Software requirements.
+- Project structure.
+- Dataset description.
+- Example usage.
+- Data quality findings.
+- Revenue results.
+- Visualization.
+- Verification.
+- Conclusion.
+- AI assistance disclosure.
+
+The draft incorporated the observed revenue results and explained the use of base R.
+
+**Application:**
+
+The generated content was compared with the existing README to improve consistency, accuracy and completeness.
+
+#### Prompt 5 – Refinement
 
 Add sections for Installation, Example Code, and License. Keep tone concise and professional.
 
-**Critique Prompt**
+**Key AI Response:**
+
+The AI expanded the README to include:
+
+- Installation instructions for R and RStudio.
+- Access instructions for Posit Cloud.
+- Installation of the rmarkdown package.
+- Example code for executing the analytical script.
+- Instructions for reviewing outputs.
+- An educational-use licensing statement.
+
+The response maintained a concise and professional tone.
+
+**Application:**
+
+These sections were compared with the existing README, which already included installation instructions, example usage and licensing information.
+
+#### Prompt 6 – Critique and Validation
 
 Review the Markdown for syntax errors and suggest 2 improvements for clarity.
 
-### Step 3: R Markdown Documentation
+**Key AI Response:**
 
-**Seed Prompt**
+The AI reviewed the README headings, lists, tables, hyperlinks, fenced code blocks, installation instructions and licensing information.
 
-Here’s my R script description. The script imports synthetic retail data, inspects its structure, calculates revenue, summarizes revenue by category and generates a bar chart. Suggest Markdown formatting and code block examples.
+No material Markdown syntax errors were identified during the textual review.
 
-**Refinement Prompt**
+Two improvements were recommended:
 
-Add syntax highlighting and improve section organization, including Purpose, Inputs and Outputs.
+1. Replace the dataset variable list with a table containing variable names, descriptions and data types.
+2. Include a comparison table showing RStudio and Google Sheets revenue results with verification statuses.
 
-**Critique Prompt**
+**Application:**
+
+The existing README included a dataset description table. The comparison table was documented in Analysis.Rmd and this Appendix.
+
+The mandatory AI Assistance Declaration was retained at the beginning of the project documentation.
+
+### Step 2 Completion Status
+
+All three prescribed prompts were completed.
+
+### Step 3: Document a Single R Script with R Markdown
+
+#### Prompt 7 – Seed
+
+Here’s my R script description. The script imports synthetic retail sales data, checks missing values and duplicates, calculates transaction revenue, summarizes overall and category-level revenue, and generates a bar chart. Suggest Markdown formatting and code block examples.
+
+**Key AI Response:**
+
+The AI recommended an R Markdown document containing:
+
+- YAML metadata.
+- Purpose.
+- Inputs.
+- Dependencies.
+- Data import and inspection.
+- Data quality assessment.
+- Revenue analysis.
+- Data visualization.
+- Outputs.
+- Verification.
+- Conclusion.
+- References.
+
+The response recommended descriptive R code chunk labels and explanatory text before code examples.
+
+**Application:**
+
+These conventions were incorporated into Analysis.Rmd to document the analytical script clearly.
+
+#### Prompt 8 – Refinement
+
+Add syntax highlighting and improve section organization (e.g., # Purpose, ## Inputs, ## Outputs).
+
+**Key AI Response:**
+
+The AI improved the proposed document structure by including:
+
+- Consistent heading levels.
+- Syntax-highlighted R code chunks.
+- Unique and descriptive chunk labels.
+- Organized input descriptions.
+- Formatted output tables.
+- Clear separation of analytical workflow and verification.
+- AI assistance disclosure.
+
+The response also recommended placing the required AI Assistance Declaration immediately after the YAML header.
+
+**Application:**
+
+The existing Analysis.Rmd was compared with these recommendations. Its structure included consistent headings, descriptive R code chunks and formatted tables.
+
+#### Prompt 9 – Critique and Validation
 
 Is the Markdown consistent with RMarkdown best practices?
 
-### Iterative Refinement Evidence
+**Key AI Response:**
 
-Related drafting, refinement and validation occurred through the actual AI interactions recorded in Section 3.
+The AI reviewed the document for:
 
-The prescribed prompts above provide the required prompting framework. They have not all been individually submitted as separate interactions.
+- Correct YAML metadata.
+- Document title and author information.
+- HTML output format.
+- Consistent heading hierarchy.
+- Clear purpose, inputs and outputs.
+- R syntax highlighting.
+- Unique code chunk labels.
+- Appropriate use of eval=FALSE.
+- Markdown table formatting.
+- Analytical workflow organization.
+- Verification documentation.
+- AI assistance disclosure.
 
-## 5. Reference Comparison
+The AI recommended retaining the mandatory declaration, documenting the complete analytical code, explaining disabled code execution and knitting the final document.
+
+**Application:**
+
+The existing full Analysis.Rmd included the previously executed analytical code and explained that eval=FALSE displays code without executing it.
+
+The updated Analysis.Rmd was successfully knitted into HTML in Posit Cloud.
+
+### Step 3 Completion Status
+
+All three prescribed prompts were completed.
+
+## 4. Prescribed AI Prompt Completion Summary
+
+| Stage | Seed | Refinement | Critique | Status |
+| --- | --- | --- | --- | --- |
+| Markdown Structure | Completed | Completed | Completed | Completed |
+| README Documentation | Completed | Completed | Completed | Completed |
+| R Markdown Documentation | Completed | Completed | Completed | Completed |
+
+All nine prescribed AI prompts were completed.
+
+The iterative prompting exercise provided evidence of documentation drafting, refinement and critique.
+
+## 5. Additional AI Interactions
+
+| Actual Prompt | Key AI Response |
+| --- | --- |
+| Answer this 100% correct | Reviewed the assignment and proposed a synthetic retail sales analysis project. |
+| can you do all? if no do the one you can do and direct me to do the one you can do | Prepared documentation drafts and identified student verification requirements. |
+| give me all : Student R script and dataset verified | Provided a synthetic dataset, R script scaffold and verification guidance. |
+| send this so i can paste : Student analytical code | Provided analytical code examples and script structure. |
+| always add link | Included direct links to relevant tools and resources. |
+| not clear. say what i should do more clearly | Simplified revenue calculation instructions. |
+| this is where i am. direct from here: | Provided instructions based on the RStudio interface. |
+| pls simplier your direction stop repeating one correction. | Simplified analytical instructions. |
+| poor direction. direct properlly | Explained how to execute the complete R script using Source. |
+| hey can't you complete the rest | Revised documentation using observed analytical results. |
+| where are the 5 updated? | Provided updated documentation files. |
+| give me correct. i will erase all these and copy and paste the correct one you are going to provide for me | Revised README.md using actual project information. |
+| STATE THE FIGURES TO MULTIPLY PLS | Identified three transactions for a manual spot-check. |
+| MULTPLY AND GIVE ME ANSWER TO INPUT | Identified existing spreadsheet results for comparison. |
+| no re write all a to z | Consolidated the Appendix and updated verification records. |
+| put to gether all to copy | Consolidated all nine completed prescribed prompts, key responses and verification evidence. |
+
+Additional interactions included screenshots, troubleshooting, spreadsheet formula guidance, GitHub upload instructions and documentation revisions.
+
+## 6. Reference Comparison
 
 ### Official GitHub Markdown Guide
 
@@ -117,11 +308,9 @@ The AI-assisted reference review informed the use of:
 
 ### Tidyverse dplyr Repository
 
-[Tidyverse dplyr GitHub Repository](https://github.com/tidyverse/dplyr)
+[Tidyverse dplyr Repository](https://github.com/tidyverse/dplyr)
 
 The reference repository demonstrates common documentation practices, including project descriptions, installation instructions, usage examples and licensing information.
-
-Similar organizational conventions were incorporated into the retail sales project.
 
 | Documentation Feature | Reference Convention | Project Application |
 | --- | --- | --- |
@@ -131,9 +320,11 @@ Similar organizational conventions were incorporated into the retail sales proje
 | Documentation | Organizes technical information | README and R Markdown files |
 | Licensing | Communicates usage terms | Educational-use statement |
 
+The project incorporated similar documentation conventions.
+
 Independent student review of these references remains to be confirmed.
 
-## 6. Dataset Verification
+## 7. Dataset Verification
 
 The synthetic retail sales dataset was imported and inspected using RStudio in Posit Cloud.
 
@@ -149,7 +340,7 @@ The synthetic retail sales dataset was imported and inspected using RStudio in P
 
 The dataset contains fictional retail transactions. No real customer or confidential information was used.
 
-## 7. Analytical Results
+## 8. Analytical Results
 
 The analytical script was executed successfully in Posit Cloud.
 
@@ -159,7 +350,7 @@ The analytical script was executed successfully in Posit Cloud.
 | Electronics | 820 |
 | Groceries | 220 |
 | Home | 405 |
-| Total Revenue | 1,835 |
+| **Total Revenue** | **1,835** |
 
 ### Key Findings
 
@@ -168,10 +359,11 @@ The analytical script was executed successfully in Posit Cloud.
 - Home products generated $405.
 - Clothing generated $390.
 - Groceries generated the lowest revenue at $220.
+- No missing values or duplicate records were identified.
 
-A labeled bar chart titled "Revenue by Product Category" was successfully generated using R.
+A labeled bar chart titled Revenue by Product Category was successfully generated using R.
 
-## 8. Independent Calculation Verification
+## 9. Independent Calculation Verification
 
 Google Sheets was used to calculate transaction revenue, category-level revenue and overall revenue separately from RStudio.
 
@@ -195,7 +387,7 @@ The formula was applied to all 12 transactions.
 =SUMIF($C$2:$C$13,H3,$F$2:$F$13)
 ```
 
-The category formula was applied to Clothing, Electronics, Groceries and Home products.
+The category formula was applied to all four product categories.
 
 ### Final Comparison of Results
 
@@ -205,9 +397,9 @@ The category formula was applied to Clothing, Electronics, Groceries and Home pr
 | Electronics | 820 | 820 | Matched |
 | Groceries | 220 | 220 | Matched |
 | Home | 405 | 405 | Matched |
-| Total Revenue | 1,835 | 1,835 | Matched |
+| **Total Revenue** | **1,835** | **1,835** | **Matched** |
 
-All four product category revenues and the overall revenue matched successfully between RStudio and Google Sheets.
+All four category revenues and the overall revenue matched successfully between RStudio and Google Sheets.
 
 The matching results demonstrate consistency between the two calculation methods.
 
@@ -224,9 +416,9 @@ The workbook contains:
 - Overall revenue calculation.
 - Revenue summaries by product category.
 
-## 9. Transaction-Level Spot-Check
+## 10. Transaction-Level Spot-Check
 
-Three transactions were selected for additional verification.
+Three transactions were selected for additional manual verification.
 
 | Transaction | Quantity | Unit Price ($) | Spreadsheet Revenue ($) |
 | --- | ---: | ---: | ---: |
@@ -234,35 +426,39 @@ Three transactions were selected for additional verification.
 | T006 | 6 | 25 | 150 |
 | T012 | 4 | 30 | 120 |
 
-The displayed spreadsheet results were identified for comparison.
+The spreadsheet results were identified for comparison.
 
-Independent manual confirmation of these three calculations remains to be recorded by the student.
+Independent manual confirmation of these three calculations remains to be confirmed by the student.
 
-## 10. R Markdown Validation
+## 11. R Markdown Validation
 
 The Analysis.Rmd file was opened in Posit Cloud.
 
 The required rmarkdown package was installed successfully.
 
-The document was knitted into an HTML file named Analysis.html.
+The original document was knitted into an HTML file named Analysis.html.
 
-The generated HTML document was opened successfully.
+Following documentation refinement, the updated Analysis.Rmd was also successfully knitted into HTML.
 
 The visible elements inspected included:
 
 - Document title.
+- Author information.
 - AI Assistance Declaration.
 - Purpose section.
+- Project objectives.
 - Input descriptions.
-- Dataset table.
-- Dependencies section.
+- Dataset tables.
+- Dependencies.
 - Markdown headings and formatting.
 
-The successful HTML rendering confirmed that the R Markdown document could be processed without a rendering error.
+Successful HTML rendering confirmed that the R Markdown document could be processed without a rendering error.
 
-A complete review of the remaining rendered sections is still required.
+The code chunks use eval=FALSE to display previously executed analytical code without running the calculations again.
 
-## 11. GitHub Validation
+The analytical script can be executed separately to reproduce its outputs.
+
+## 12. GitHub Validation
 
 The GitHub repository was created using the required naming convention.
 
@@ -272,7 +468,7 @@ The GitHub repository was created using the required naming convention.
 
 https://github.com/MajellaNkadi/markdown-buddy-majella
 
-The following seven core project files were successfully uploaded:
+The following seven core project files were uploaded:
 
 - README.md
 - README_Outline.md
@@ -282,19 +478,20 @@ The following seven core project files were successfully uploaded:
 - retail_analysis.R
 - retail_sales.csv
 
-The README.md file was updated and previewed on GitHub.
+### Documentation Updates
 
-The Appendix.md file was updated and previewed on GitHub.
-
-The Reflection.md file was revised and committed.
-
-The original analytical script scaffold was replaced with the completed R script.
-
-The analytical script was further refined to include clear comments, an AI Assistance Declaration and previously executed data quality checks.
+- README.md was revised and committed.
+- README_Outline.md was revised and committed.
+- Appendix.md was revised to include AI assistance and verification evidence.
+- Reflection.md was revised and committed.
+- Analysis.Rmd was updated and successfully knitted.
+- The original analytical script scaffold was replaced with the completed script.
+- Outdated TODO comments were removed from the analytical script.
+- Previously executed data quality checks were included in the analytical script.
 
 The visible GitHub documentation rendered correctly.
 
-## 12. Documentation Refinements
+## 13. Documentation Refinements
 
 | Initial Issue | Improvement |
 | --- | --- |
@@ -305,16 +502,19 @@ The visible GitHub documentation rendered correctly.
 | Incomplete data quality documentation | Added missing-value and duplicate-record findings. |
 | Incomplete verification records | Added RStudio and Google Sheets comparison results. |
 | Draft AI disclosure | Expanded to describe actual AI assistance. |
-| Incorrect R Markdown filename | Corrected Analysis (2).Rmd to Analysis.Rmd. |
+| Incorrect R Markdown filename | Corrected to Analysis.Rmd. |
 | Missing rendering evidence | Added successful HTML knitting details. |
 | Incomplete analytical script | Replaced the original scaffold with the completed script. |
 | Outdated TODO comments | Replaced with descriptive analytical comments. |
 | Missing category verification | Added matching RStudio and Google Sheets category results. |
-| Conflicting verification statuses | Updated category-level verification to Completed. |
+| Conflicting verification statuses | Updated completed category-level verification. |
+| Outdated R Markdown documentation | Updated with completed analytical and verification results. |
+| Outdated documentation outline | Revised to reflect the completed project. |
+| Incomplete prescribed prompt records | Recorded all nine completed prompts and key responses. |
 
 These refinements improved documentation accuracy, readability, organization and consistency.
 
-## 13. Technical Challenges and Resolutions
+## 14. Technical Challenges and Resolutions
 
 ### R Comment Syntax
 
@@ -344,7 +544,7 @@ The generated HTML document was subsequently opened successfully.
 
 The browser added numbered suffixes to repeated downloads.
 
-The R Markdown file was renamed to Analysis.Rmd before uploading it to GitHub.
+The R Markdown file was renamed correctly before uploading it to GitHub.
 
 ### Outdated GitHub Files
 
@@ -358,7 +558,15 @@ The initial category revenue formulas referenced the preceding row, resulting in
 
 The formula references were corrected, and all category results subsequently matched the RStudio outputs.
 
-## 14. Final Verification Log
+### Duplicate R Markdown Filename
+
+Posit Cloud prevented the updated R Markdown file from being renamed because a file with the same name already existed.
+
+The original file was preserved as a backup, and the updated file was renamed Analysis.Rmd.
+
+The updated document was then successfully knitted.
+
+## 15. Final Verification Log
 
 | Verification Activity | Status |
 | --- | --- |
@@ -377,24 +585,35 @@ The formula references were corrected, and all category results subsequently mat
 | R and Sheets overall revenue compared | Completed |
 | Independent category-level verification | Completed |
 | R Markdown package installed | Completed |
-| R Markdown knitted into HTML | Completed |
-| Initial HTML preview inspected | Completed |
+| Original R Markdown document knitted | Completed |
+| Updated R Markdown document knitted | Completed |
+| Visible HTML preview inspected | Completed |
 | GitHub repository created | Completed |
 | Seven core project files uploaded | Completed |
 | Updated README committed | Completed |
 | Initial GitHub README preview | Completed |
+| README outline updated | Completed |
 | Appendix documentation revised | Completed |
 | Reflection draft prepared | Completed |
 | Completed analytical script uploaded | Completed |
-| Category verification documentation updated | Completed |
+| Category verification documented | Completed |
+| Step 1 seed prompt | Completed |
+| Step 1 refinement prompt | Completed |
+| Step 1 critique prompt | Completed |
+| Step 2 seed prompt | Completed |
+| Step 2 refinement prompt | Completed |
+| Step 2 critique prompt | Completed |
+| Step 3 seed prompt | Completed |
+| Step 3 refinement prompt | Completed |
+| Step 3 critique prompt | Completed |
+| All nine prescribed AI prompts | Completed |
 | Independent manual self spot-check | Awaiting confirmation |
 | Independent reference review | Awaiting confirmation |
-| Full documentation preview | Awaiting confirmation |
-| All prescribed AI prompt iterations | Not individually completed |
+| Full final documentation preview | Awaiting confirmation |
 | Official reflection question confirmation | Awaiting confirmation |
 | Final LMS submission | Pending |
 
-## 15. Privacy and Ethical AI Use
+## 16. Privacy and Ethical AI Use
 
 Only synthetic retail sales data was used in this project.
 
@@ -412,6 +631,7 @@ ChatGPT assisted with:
 - Reflection drafting.
 - Documentation refinement.
 - GitHub organization.
+- Iterative documentation prompting.
 
 The student executed the analytical calculations using RStudio and Google Sheets.
 
@@ -419,21 +639,23 @@ AI-assisted suggestions were reviewed through practical execution and comparison
 
 The use of AI-generated analytical code examples and documentation was disclosed rather than represented as entirely unaided work.
 
-The student remains responsible for the accuracy, originality, verification and completeness of the final submission.
+The student remains responsible for reviewing the final submission and ensuring compliance with the assignment's AI usage and academic integrity requirements.
 
-## 16. Conclusion
+## 17. Conclusion
 
 The retail sales analysis project demonstrates the application of R programming, Markdown documentation, R Markdown rendering, spreadsheet verification and GitHub version control.
 
 The analysis successfully generated transaction revenue, overall revenue, category-level revenue summaries and a labeled bar chart.
 
-The overall revenue of $1,835 and all four category revenue results matched between RStudio and Google Sheets.
+The overall revenue of $1,835 and all four category revenues matched between RStudio and Google Sheets.
+
+All nine prescribed AI prompts were completed, demonstrating the use of seed prompts, refinement prompts and critique prompts to support documentation development.
 
 AI assistance supported documentation development and technical troubleshooting, while practical execution and verification provided evidence of the analytical outcomes.
 
-The remaining verification activities and official reflection requirements should be confirmed before final submission.
+The project demonstrates the importance of organized documentation, reproducible analysis, transparent AI attribution and independent verification.
 
-## 17. References
+## 18. References
 
 - [Official GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [Tidyverse dplyr Repository](https://github.com/tidyverse/dplyr)

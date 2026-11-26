@@ -1,58 +1,131 @@
+
 ---
 title: "Retail Sales Analysis Documentation"
+author: "Majella Nkadi"
+date: "November 25, 2026"
 output: html_document
 ---
 
-**AI Assistance Declaration (review before submission):** I used ChatGPT (GPT-6.2, November 25, 2026) for documentation drafting, Markdown formatting, R code examples and troubleshooting, and spreadsheet formula guidance. Prompts used: see Appendix.md. I verified outputs by running R in Posit Cloud and comparing the total with Google Sheets; remaining checks are recorded in Appendix.md. All final calculations are done by myself using R and Sheets. I am responsible for the accuracy and originality of this work.
+**AI Assistance Declaration:** I used ChatGPT (GPT-6.2, November 25, 2026) for documentation drafting, Markdown formatting, synthetic dataset preparation, R code examples, troubleshooting and spreadsheet formula guidance. The actual prompts and key responses are documented in Appendix.md. I verified outputs by executing the R script in Posit Cloud, comparing overall and category-level revenues with Google Sheets, knitting the R Markdown document and previewing documentation on GitHub. I performed the calculations using R and Google Sheets with disclosed AI assistance. I am responsible for the accuracy and originality of this work.
 
 # Purpose
 
-The script `retail_analysis.R` examines synthetic retail transactions and summarizes revenue by product category.
+This project demonstrates the application of R programming to analyze synthetic retail sales data, assess data quality, calculate transaction revenue, summarize revenue by product category and visualize sales performance.
+
+The analytical script, `retail_analysis.R`, was developed as part of BDA400 – Data Science Tools and Techniques, Assignment 1: Markdown Buddy.
+
+## Objectives
+
+- Import and inspect synthetic retail sales data.
+- Identify missing values and duplicate records.
+- Calculate revenue for individual transactions.
+- Calculate overall revenue.
+- Summarize revenue by product category.
+- Generate a labeled bar chart.
+- Verify analytical results using Google Sheets.
 
 ## Inputs
 
-| Field | Meaning | Imported type |
+The analysis uses `retail_sales.csv`, a synthetic dataset containing 12 transactions and five original variables.
+
+| Field | Description | Imported Data Type |
 | --- | --- | --- |
-| Transaction_ID | Transaction identifier | Character |
+| Transaction_ID | Unique transaction identifier | Character |
 | Sales_Date | Transaction date | Character |
 | Category | Product category | Character |
-| Quantity | Units sold | Integer |
-| Unit_Price | Unit price | Integer |
+| Quantity | Number of units sold | Integer |
+| Unit_Price | Price per unit | Integer |
+
+The Revenue variable is created during the analysis.
+
+Only synthetic data was used. No real customer or confidential information was included.
 
 ## Dependencies
 
-The analysis uses base R. Rendering this document requires R Markdown and Pandoc.
+- R version 4.6.2
+- RStudio or Posit Cloud
+- Base R functions
+- R Markdown
+- Pandoc
 
-## Workflow
+The analytical script uses base R and does not require additional data analysis packages.
 
-### Import and inspection
+# Analytical Workflow
 
-The CSV is imported into `sales`. The student inspected its structure and checked missing values and duplicate rows in the Console.
+## 1. Data Import
+
+The synthetic CSV dataset is imported into R and stored in a data frame named `sales`.
+
+```{r import, eval=FALSE}
+sales <- read.csv("retail_sales.csv", stringsAsFactors = FALSE)
+```
+
+## 2. Data Inspection and Quality Assessment
+
+The dataset was inspected to confirm its structure, dimensions, missing values and duplicate records.
 
 ```{r inspection, eval=FALSE}
 head(sales)
 str(sales)
+dim(sales)
 colSums(is.na(sales))
 sum(duplicated(sales))
 ```
 
-### Revenue and summary
+### Data Quality Results
 
-The following lines reproduce the code visible in the student's executed script. Revenue is quantity multiplied by unit price; `sum` totals revenue and `aggregate` groups it by category.
+| Quality Check | Result |
+| --- | ---: |
+| Number of transactions | 12 |
+| Original variables | 5 |
+| Missing values | 0 |
+| Duplicate records | 0 |
+| Product categories | 4 |
 
-```{r summary, eval=FALSE}
+The completed checks identified no missing values or duplicate records.
+
+## 3. Transaction Revenue Calculation
+
+Revenue was calculated by multiplying the quantity sold by the unit price.
+
+Revenue = Quantity × Unit Price
+
+```{r revenue, eval=FALSE}
 sales$Revenue <- sales$Quantity * sales$Unit_Price
+```
+
+The Revenue column increased the number of variables from five to six.
+
+## 4. Overall Revenue Calculation
+
+The overall revenue was calculated using the R `sum()` function.
+
+```{r total-revenue, eval=FALSE}
 total_revenue <- sum(sales$Revenue)
 print(total_revenue)
-category_revenue <- aggregate(Revenue ~ Category, data = sales, FUN = sum)
+```
+
+Observed overall revenue: $1,835.
+
+## 5. Revenue by Product Category
+
+The `aggregate()` function was used to summarize revenue by product category.
+
+```{r category-revenue, eval=FALSE}
+category_revenue <- aggregate(
+  Revenue ~ Category,
+  data = sales,
+  FUN = sum
+)
+
 print(category_revenue)
 ```
 
-### Visualization
+## 6. Data Visualization
 
-The bar chart displays category revenue with descriptive axis labels.
+A labeled bar chart was created to compare revenue across the four product categories.
 
-```{r chart, eval=FALSE}
+```{r visualization, eval=FALSE}
 barplot(category_revenue$Revenue,
         names.arg = category_revenue$Category,
         main = "Revenue by Product Category",
@@ -61,18 +134,109 @@ barplot(category_revenue$Revenue,
         col = "steelblue")
 ```
 
-## Outputs
+The chart was successfully generated in Posit Cloud.
 
-| Category | Revenue ($) |
+# Outputs
+
+The analytical script produced the following outputs:
+
+- Dataset structure and dimensions.
+- Missing-value and duplicate-record checks.
+- Transaction revenue calculations.
+- Overall revenue.
+- Revenue summaries by product category.
+- A labeled revenue bar chart.
+
+## Revenue Results
+
+| Product Category | Revenue ($) |
 | --- | ---: |
 | Clothing | 390 |
 | Electronics | 820 |
 | Groceries | 220 |
 | Home | 405 |
-| **Overall** | **1,835** |
+| **Total Revenue** | **1,835** |
 
-The student successfully generated the chart in Posit Cloud. The code chunks above are documentation examples with execution disabled; run the actual script separately to reproduce its outputs.
+## Key Findings
 
-## Verification
+- Overall revenue was $1,835.
+- Electronics generated the highest revenue at $820.
+- Home products generated $405.
+- Clothing generated $390.
+- Groceries generated the lowest revenue at $220.
+- No missing values or duplicate records were identified.
 
-The R Console showed zero missing values and zero duplicate rows. Google Sheets displayed an overall total of 1,835, matching R. Category-level cross-check, self spot-check and HTML knitting are still to be documented.
+The visualization provides a clear comparison of revenue performance across product categories.
+
+# Verification and Validation
+
+## Independent Spreadsheet Verification
+
+Google Sheets was used to calculate transaction revenue, overall revenue and category-level revenue separately from RStudio.
+
+The observed results were compared as follows:
+
+| Category | RStudio ($) | Google Sheets ($) | Status |
+| --- | ---: | ---: | --- |
+| Clothing | 390 | 390 | Matched |
+| Electronics | 820 | 820 | Matched |
+| Groceries | 220 | 220 | Matched |
+| Home | 405 | 405 | Matched |
+| Total Revenue | 1,835 | 1,835 | Matched |
+
+All four category revenues and the overall revenue matched between RStudio and Google Sheets.
+
+The matching results demonstrate consistency between both calculation methods.
+
+## Transaction-Level Spot-Check
+
+The following transactions were selected for additional manual verification.
+
+| Transaction | Quantity | Unit Price ($) | Spreadsheet Revenue ($) |
+| --- | ---: | ---: | ---: |
+| T001 | 2 | 150 | 300 |
+| T006 | 6 | 25 | 150 |
+| T012 | 4 | 30 | 120 |
+
+Independent manual confirmation is recorded separately when completed.
+
+## R Markdown Validation
+
+The R Markdown package was successfully installed in Posit Cloud.
+
+The `Analysis.Rmd` document was successfully knitted into `Analysis.html`.
+
+The generated HTML document was opened, and its visible title, headings, tables and formatting were inspected.
+
+The code chunks in this document are displayed as documentation examples with execution disabled. Run `retail_analysis.R` separately to reproduce the analytical results.
+
+The updated version of this document requires a final knitting and preview check.
+
+## GitHub Documentation
+
+The project files were uploaded to the GitHub repository:
+
+[markdown-buddy-majella](https://github.com/MajellaNkadi/markdown-buddy-majella)
+
+GitHub supports version control, documentation accessibility and the organization of project files.
+
+# Conclusion
+
+This project demonstrates how R can be used to inspect datasets, calculate revenue, summarize business performance and create meaningful visualizations.
+
+The analytical workflow produced an overall revenue of $1,835, with Electronics generating the highest revenue.
+
+The matching RStudio and Google Sheets results demonstrate the importance of independent verification.
+
+R Markdown provided a structured approach to documenting the analytical script, while GitHub supported project organization and version control.
+
+AI assistance supported documentation development, code examples and troubleshooting. The assistance received is disclosed in the project documentation and Appendix.md.
+
+# References
+
+- [R Project](https://www.r-project.org/)
+- [R Markdown Documentation](https://rmarkdown.rstudio.com/)
+- [Posit Cloud](https://posit.cloud/)
+- [Google Sheets](https://sheets.google.com/)
+- [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [AI Assistance and Verification Appendix](Appendix.md)

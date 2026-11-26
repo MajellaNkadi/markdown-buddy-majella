@@ -268,3 +268,16 @@ The student remains responsible for the accuracy, originality and completeness o
 - [R Markdown Documentation](https://rmarkdown.rstudio.com/)
 - [Posit Cloud](https://posit.cloud/)
 - [Google Sheets](https://sheets.google.com/)
+
+## Final Category Revenue Verification
+
+| Category | RStudio ($) | Google Sheets ($) | Status |
+| --- | ---: | ---: | --- |
+| Clothing | 390 | 390 | Matched |
+| Electronics | 820 | 820 | Matched |
+| Groceries | 220 | 220 | Matched |
+| Home | 405 | 405 | Matched |
+| Total Revenue | 1835 | 1835 | Matched |
+
+All category revenues and overall revenue matched
+between RStudio and Google Sheets.

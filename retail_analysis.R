@@ -13,13 +13,21 @@ str(sales)
 
 # 3. Calculate revenue
 # TODO: Create a Revenue column using Quantity and Unit_Price.
-
+sales$Revenue <- sales$Quantity * sales$Unit_Price
 # 4. Summarize sales
-# TODO: Calculate total revenue by Category and overall revenue.
-
+# TODO: Calculate total revenue
+total_revenue <- sum(sales$Revenue)
+print(total_revenue)
+category_revenue <- aggregate(Revenue ~ Category, data = sales, FUN = sum)
+print(category_revenue)
 # 5. Visualize
 # TODO: Create a labeled bar chart of revenue by category.
-
+barplot(category_revenue$Revenue,
+        names.arg = category_revenue$Category,
+        main = "Revenue by Product Category",
+        xlab = "Product Category",
+        ylab = "Revenue ($)",
+        col = "steelblue")
 # 6. Verify
 # TODO: Independently calculate results in Sheets and compare.
 # Record actual checks in Appendix.md.
